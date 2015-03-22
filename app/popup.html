@@ -1,25 +1,132 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css styles/main.css -->
-    <link href="styles/main.css" rel="stylesheet">
-    <!-- endbuild -->
-  </head>
-  <body>
-    <h1>'Allo, 'Allo!</h1>
+    <meta name="description" content="An advanced dictionary.">
+    <meta name="author" content="Tanmay Patil">
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
+    <title>Dictionary+ : An Advanced Dictionary</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    
+    <!-- Cascading Style Sheets -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="bower_components/Bootflat/bootflat/css/bootflat.min.css" rel="stylesheet" media="screen">
+    <link href="styles/main.css" rel="stylesheet" media="screen">        
+</head>
 
-    <!-- build:js scripts/popup.js -->
-    <script src="scripts/popup.js"></script>
-    <!-- endbuild -->
-  </body>
+<body>
+    <nav class="navbar navbar-default colg-header">
+        <div class="container-fluid">
+            <div class="row">      
+                <div class="col-xs-2">
+                    <img src="./images/icon-128.png" class="img-responsive">
+                    <p class="small"> Dictionary+</p>
+                </div>
+                <form class="navbar-form navbar-right col-xs-10" id="toPrevent" style="padding-left:0px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Type a word" id="query">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="def"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>                 
+                    </div><!-- /input-group -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row hide" data-spy="affix" data-offset-top="0">
+            <div class="col-12 no-padding">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Type a word" id="query">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" id="def"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>                 
+                </div><!-- /input-group -->
+            </div>
+            <hr/>
+        </div>
+        <div class="row hide" id="whole">
+            <div class="col-xs-12">
+                <div role="tabpanel">
+                    <div class="row">
+                        <div class="col-xs-2 container-tabs-navigation affix">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-pills nav-stacked" role="tablist">
+                                <li role="presentation" class="active" id="1"><a href="#define" aria-controls="define" role="tab" data-toggle="tab">Home</a></li>
+                                <li role="presentation" id="2"><a href="#examples" aria-controls="examples" role="tab" data-toggle="tab">    Profile</a></li>
+                                <li role="presentation" id="#"><a href="#relate" aria-controls="relate" role="tab" data-toggle="tab">  Messages</a></li>
+                                <li role="presentation" id="3"><a href="#word" aria-controls="word" role="tab" data-toggle="tab">Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-offset-2 col-xs-10">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="define">
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                    <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="examples">
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                    <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="relate">
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                    <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="word">
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                    <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-xs-2 hide">
+                <ul id="myTab" class="nav nav-pills nav-stacked col-xs-2 container-tabs-navigation affix">
+                    <li class="active" id="1"><a href="#define" data-toggle="tab"><center><i class="fa fa-book"></i><br/>Definition</center></a></li>
+                    <li id="2"><a href="#examples" data-toggle="tab"><center><i class="fa fa-th-list fa-2x"></i> <br/>Examples</center></a></li>
+                    <li id="3"><a href="#relate" data-toggle="tab"><center><i class="fa fa-tag fa-2x"></i> <br/>Relate</center></a></li>
+                    <li id="4"><a href="#word" data-toggle="tab"><center><i class="fa fa-magic fa-2x"></i> <br/>Word of the day</center></a></li>
+                </ul>
+            </div>
+            <br/>
+            <div class="col-xs-10 hide">
+                <div id="myTabContent" class="tab-content pull-right">
+                    <div class="tab-pane fade in active" id="define">                   
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                        <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                        <br/><br/><br/><br/><br/><br/><br/><br/>                       
+                    </div>
+                    <div class="tab-pane fade" id="examples">
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                        <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    <div class="tab-pane fade" id="relate">
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                        <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    <div class="tab-pane fade" id="word">
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                        <center><i class="fa fa-refresh fa-spin fa-3x" style="color:#aeb1b1"></i></center>
+                        <br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/dictionary-plus.js"></script>
+    <!-- Scripts -->
+</body>
 </html>

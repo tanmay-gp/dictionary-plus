@@ -1,3 +1,231 @@
-body {
-  padding: 20px;
+/***
+**
+*	Custom CSS
+**	
+***/
+
+body, section {			/* Change width and height to own preferences */
+	width: 600px;
+	height: 600px;
+	overflow-x: hidden;
+	font-family: 'Source Sans Pro';
+	font-size: 14px;
+	//background-color: #f5f5f5;
+}
+img {
+	margin: 5px;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+}
+
+/* Basic style tweaks */
+section { padding: 5px;}
+
+.navbar { 
+	margin-bottom: 2px;
+	//background-color: #4374e0;
+	//color: white; 
+}
+
+.navbar-default{
+	border: none;
+	/*border-color: none;*/
+}
+
+/* Basic style tweaks */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Scroll Bar */
+.scrollable::-webkit-scrollbar {
+  height: 10px;
+  width: 7px;
+}
+.scrollable::-webkit-scrollbar-button:start:decrement,
+.scrollable::-webkit-scrollbar-button:end:increment {
+  background-color: transparent;
+  display: block;
+  height: 0;
+}
+.scrollable::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid
+  transparent;
+  border-width: 0 0 0 4px;
+}
+.scrollable::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.scrollable::-webkit-scrollbar:hover {
+  background-color: #f3f3f3;
+  border: 1px solid #dbdbdb;
+}
+.scrollable::-webkit-scrollbar-thumb:vertical,
+.scrollable::-webkit-scrollbar-thumb:horizontal {
+  background-color: #c6c6c6;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid transparent;
+  border-width: 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07);
+  -moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07);
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07);
+  background-clip: padding-box;
+}
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #949494;
+}
+.scrollable::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/**
+ * Custom header CSS
+ */
+.colg-header {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #ebebeb;
+	padding: 12px 0 10px;
+	//position: fixed;
+	//left:0;
+	//right: 0;
+	z-index: 1;
+	-webkit-box-shadow: 0px 2px 6px -1px #C7C7C7;
+	-moz-box-shadow: 0px 2px 6px -1px #c7c7c7;
+	box-shadow: 0px 2px 6px -1px #C7C7C7;
+}
+
+.container-tabs-navigation{
+	/*top: 90px;*/
+	border-right: 1px solid #d3d7d7;
+	height: 100%;
+	left: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.container-tabs-navigation .affix{
+	-webkit-box-shadow: 0px 2px 6px -1px #C7C7C7;
+	-moz-box-shadow: 0px 2px 6px -1px #c7c7c7;
+	box-shadow: 0px 2px 6px -1px #C7C7C7;
+}
+
+/* Pallet */
+.pallet {
+	//-webkit-border-radius: 3px;
+	//border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff;
+	white-space: normal;
+	margin: 0 8px 8px 0;
+	//border: 1px solid #d8d8d8;
+	//border-bottom-width: 2px;
+	//border-top-width: 0;
+	//vertical-align: top;
+}
+
+.blue{
+	background-color: #4374e0;
+	color: #fff;
+}
+.red{
+	background-color: #d73d32;
+	color: #fff;
+}
+.lightblue{
+	background-color: #11a9cc;
+	color: #fff;
+}
+.orange{
+	background-color: #e49307;
+	color: #fff;
+}
+.darkred{
+	background-color: #981b48;
+	color: #fff;
+}
+.purple{
+	background-color: #7e3794;
+	color: #fff;
+}
+.grey{
+	background-color: #f7f7f7;
+	color: #000;
+}
+.brandtext{
+	font-size: 25px;
+	font-weight: lighter;
+}
+.hightext{
+	font-size: 20px;
+	font-weight: lighter;
+	margin-bottom: 3px;
+	//margin-right: 85px;
+}
+.definitions{
+	font-size: 15px;
+	font-weight: lighter;
+	padding:10px 45px;
+	margin:0 0 10px;
+	//border-left:25px solid #7e3794;
+}
+.small{
+	font-size: 11px;
+}
+
+.no-margin{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.no-padding{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.rowpad{
+	padding: 10px;
+}
+
+.white{
+	color:white;
+}
+
+.black{
+	color:#000;
+}
+
+/* Flatten das boostrap */
+.mini-stat, .well, .navbar-inner, .popover, .btn, .btn-sm, .panel, .panel-heading, .tooltip, input, select, textarea, pre, .progress, .modal, .modal-wide, .modal-dialogue, .modal-header, .add-on, .alert, .table-bordered, .nav>.active>a, .nav>li>a, .dropdown-menu, .tooltip-inner, .badge, .label, .img-polaroid, .input-group {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  border-collapse: collapse !important;
+  background-image: none !important;
 }
